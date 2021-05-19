@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App';
 
-ReactDOM.render(
-    <h1>hell</h1>,
-    document.getElementById("app")
-);
+ReactDOM.render(<App />, document.getElementById('app'));
