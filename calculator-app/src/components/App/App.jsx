@@ -8,22 +8,21 @@ import './App.css';
 const App = () => {
 
   const [stack, setStack] = useState('');
-  const clickHandlerFunction = (text) => {
-    console.log(text);
-  };
+  // const clickHandlerFunction = (text) => {
+  //   console.log(text);
+  // };
   return (
     <main className='react-calculator'>
       <Result value={stack} />
-      <Numbers onClickNumber={(num) => {
-        clickHandlerFunction(num);
-        setStack(`${stack}${num}`);
-      }}
-      />
+      <Numbers onClickNumber={(num) => setStack(`${stack}${num}`)} />
       <Functions
         onContentClear={() => setStack('')}
-        onDelete={(del) => {
-          const newStack = stack.substring(0, stack.length - 1);
-          setStack(`${newStack}`);
+        onDelete={() => {
+          if (stack.length > 0) {
+            const newStack = stack.substring(0, stack.length - 1);
+            setStack(`${newStack}`);
+          }
+
         }}
       />
       <MathOperation
