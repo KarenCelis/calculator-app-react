@@ -27,7 +27,8 @@ const App = () => {
       />
       <MathOperation
         onClickOperation={(operation) => setStack(`${stack}${operation}`)}
-        OnclickEqual={(equal) => setStack(`${stack}${equal}`)}
+        // eslint-disable-next-line no-eval
+        OnclickEqual={() => setStack(eval(stack).toString())}
       />
     </main>
   );
