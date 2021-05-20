@@ -20,12 +20,15 @@ const App = () => {
       }}
       />
       <Functions
-        onContentClear={(clear) => clickHandlerFunction(clear)}
-        onDelete={(del) => clickHandlerFunction(del)}
+        onContentClear={() => setStack('')}
+        onDelete={(del) => {
+          const newStack = stack.substring(0, stack.length - 1);
+          setStack(`${newStack}`);
+        }}
       />
       <MathOperation
-        onClickOperation={(operation) => clickHandlerFunction(operation)}
-        OnclickEqual={(equal) => clickHandlerFunction(equal)}
+        onClickOperation={(operation) => setStack(`${stack}${operation}`)}
+        OnclickEqual={(equal) => setStack(`${stack}${equal}`)}
       />
     </main>
   );
