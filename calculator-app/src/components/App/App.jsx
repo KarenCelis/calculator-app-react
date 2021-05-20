@@ -16,7 +16,7 @@ const App = () => {
       <Result value={stack} />
       <Numbers onClickNumber={(num) => {
         clickHandlerFunction(num);
-        setStack(num);
+        setStack(`${stack}${num}`);
       }}
       />
       <Functions
