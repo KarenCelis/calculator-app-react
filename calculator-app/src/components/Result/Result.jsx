@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/styles/components/Result.css';
+import './Result.css';
 import PropTypes from 'prop-types';
 
 const Result = ({ value }) => (<div className='result'>{value}</div>);
