@@ -4,10 +4,10 @@
     height: 80px;
     padding: 8px;
     overflow: hidden;
-    background-color: rgba(19, 19, 19, .64);
+    background-color: #34656d;
     font-size: 32px;
     line-height: 2;
-    color: #60d63c;
+    color: #fffbdf;
     text-align: right;
     direction: rtl;
     white-space: nowrap;

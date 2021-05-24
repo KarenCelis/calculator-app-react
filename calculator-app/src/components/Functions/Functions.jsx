@@ -6,7 +6,7 @@ import Button from '../Button/Button';
 const Functions = ({ onContentClear, onDelete }) => (
   <section className='functions'>
     <Button type='button-long-text' text='clear' clickHandler={onContentClear} />
-    <Button type='button' text='remove' clickHandler={onDelete} />
+    <Button type='button-long-text' text='remove' clickHandler={onDelete} />
   </section>
 );
 Functions.propTypes = {
